@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.neha.appathon2">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- <receiver android:name="ExampleAppWidgetProvider" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+        <!-- </intent-filter> -->
+        <!-- <meta-data android:name="android.appwidget.provider" -->
+        <!-- android:resource="@xml/example_appwidget_info" /> -->
+        <!-- </receiver> -->
+        <receiver android:name="com.neha.appathon2.util.ButtonWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.neha.appathon2.ACTION_SEND_SMS"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info"/>
+        </receiver>
+        <receiver android:name="com.neha.appathon2.adapter.TimeAlarm" android:process=":remote" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Onedisease"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Display_Doctor" />
+        <activity
+            android:name=".Sign_Up"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Log_In" />
+        <activity
+            android:name=".Profile"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Booking"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MyBookings"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Demo1"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Demo2"
+            android:parentActivityName=".MainActivity"></activity>
+    </application>
+
+</manifest>

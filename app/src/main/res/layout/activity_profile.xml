@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Profile">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+
+        android:src="@drawable/ic_account_circle_24dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/image"
+        android:layout_gravity="center_horizontal"
+        />
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name : Nishit Chhatrala" />
+
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LastName : Chhatrala" />
+
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name : Nishit Chhatrala" />
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Id : nishit@gmail.com" />
+
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile : 8460770916" />
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency Num : 999999999" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
